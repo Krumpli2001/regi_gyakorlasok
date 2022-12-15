@@ -1,0 +1,3 @@
+Ezt a fajlt c++ nyelven  irt programmal hoztam letre!
+YIPPY!
+Hello vilag?
