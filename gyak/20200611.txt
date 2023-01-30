@@ -1,0 +1,55 @@
+Készítsen diff nevű függvényt, ami egy tömbben tárolt, időben változó digitális jelsorozat deriváltják közelíti véges differenciával. A tömb i-edik indexű eleme megadja, hogy a digitális jel milyen értéket vett fel az i-edik időpillanatban.
+
+A véges differenciát az alábbi módon határozzuk meg: A kimeneti oldalon az i-edik időpillanathoz tartozó közelítő derivált érték legyen a bemeneti jel i-edik időpillanatban vett értékének és az (i-1)-edik időpillanatban vett értékének a különbsége. Ahol az (i-1)-edik időpillanat nem értelmezhető, ott a kimeneti oldalon 0 érték szerepeljen.
+
+
+
+
+Készítsen akkord nevű függvényt, ami megadja egy zenei hármashangzat hangjait az alaphang és a hangnem alapján.
+
+A lehetséges zenei hangok sorrendben a következők (a programban nagybetűvel tárolva): C, C#, D, D#, E, F, F#, G, G#, A, B, H. A hangok folytonosan követik egymást, tehát a "H" hang után ismét "C" következik, majd "C#" és így tovább.
+
+A függvény első paramétere az alaphang (nagybetűvel), majd a hangnem, ami "moll" vagy "dur" lehet (kisbetűvel, ékezet nélkül).
+
+Ha a hangnem moll, akkor a hármashangzat sorrendben a következő hangokból áll: alaphang, alaphang után következő 3. hang, és az alaphang után következő 7. hang.
+
+Ha a hangnem dúr, akkor a hármashangzat sorrendben a következő hangokból áll: alaphang, alaphang után következő 4. hang, és az alaphang után következő 7. hang.
+
+A kimeneti string-ben egymástól egy-egy szóközzel elválasztva jelenjenek meg a hangok nevei.
+
+Például:
+
+Az alaphang C és a hangnem dúr, akkor a kimenet: "C E G".
+Az alaphang A és a hangnem moll, akkor a kimenet: "A C E".
+
+Feltételezheti, hogy a függvény helyesen kerül paraméterezésre, így a paraméterek helyességének vizsgálatával nem kell foglalkoznia.
+
+
+
+
+Készítsen avg nevű függvényt, ami egy paraméterül kapott tömb elemeinek az átlagát veszi úgy, hogy a számítás során nem veszi figyelembe a tömb legnagyobb és a legkisebb elemét. Feltételezhető, hogy a tömbben egy érték csak egyszer szerepel, így nem kell azzal az esettel foglalkozni, ha több legkisebb vagy legnagyobb érték található, illetve azzal sem, ha a legkisebb és legnagyobb érték ugyanaz.
+
+
+
+
+
+
+Készítsen darabszam függvényt, ami egy szivarok adatait tartalmazó listán megszámolja a Churchill és Toro méretű szivarokat.
+
+A szivarok az alábbi struktúrában kerülnek tárolásra (a struktúrát nem kell létrehoznia):
+
+struct szivar {
+  double hossz;
+  int atmero;
+  szivar* kov;
+};
+
+Minden szivar esetén adott a hossza hüvelykben és a gyűrű mérete (átmérője).
+
+A darabszam függvény bemenetként vár egy szivarokból álló láncolt listát, amin a megfelelő méretű szivarokat kell megszámolni. A darabszámokat a bemenetként kapott memóriaterületekre kell írni. Egy szivart akkor tekintünk Churchill méretűnek, ha hossza minimum 6,75 és maximum 8, valamint gyűrű mérete minimum 46 és maximum 48. Toro méretről akkor beszélünk, ha a szivar hossza minimum 5,5 és maximum 6,5, illetve a gyűrűje minimum 48 és maximum 54 méretű.
+
+
+
+
+
+Készítsen v2m névvel függvényt, ami vektorból mátrixot készít. A függvény paraméterül várja a vektort, annak elemszámát és az előállítandó mátrix sorainak, oszlopainak számát. A függvényt úgy kell megvalósítani, hogy az a vektor elemeivel, a sorban az elsőtől az utolsóig haladva, feltölti a mátrixot. Először a mátrix első sorát töltse fel az első oszloptól az utolsóig haladva, majd a második sor következik, és így tovább a mátrix utolsó soráig. Feltételezheti, hogy a függvény mindig megfelelően kerül paraméterezésre, így nem kell azzal az esettel foglalkozni, ha a mátrix oszlop és sorszámának szorzata nem egyezik a vektor hosszával. A mátrixot tároló tömböt úgy alakítsa ki, hogy az első index a sort, a második az oszlopot határozza meg.
