@@ -1,0 +1,50 @@
+Írjon egy C++ programot, amely beolvas 2 nemnegatív egész számot, amely megadja az ábécé 2 betűjének sorszámát.
+ A program írja ki az ábécé betűit az első sorszámtól a második sorszámmal bezárólag! A betűket nagybetűvel, elválasztójel nélkül felsorolva írja ki!
+
+Figyeljen rá, hogy ha az első sorszám nagyobb, akkor fordított ábécé-sorrendben kell kiírni a betűket!
+
+A sorszámok mindig 1 és 26 közöttiek, ezt nem kell ellenőrizni a megoldás során.
+
+rjon egy C++ programot, amely egy IP-címekből álló listából kiválogatja azokat, amelyek legalább kétszer ismétlődnek!
+
+
+
+
+A standard bemenetről először olvasson be egy számot, amely megadja, hány IP-cím fog következni. Majd olvassa be az IP-címeket.
+Ezután a kimeneten sortöréssel elválasztva sorolja fel azokat az IP-címeket, amelyek legalább kétszer szerepeltek a bemeneten.
+
+A kiírásban már minden ismétlődő IP-cím csak egyszer szerepeljen, és olyan sorrendben legyenek, amilyen sorrendben először előfordultak a bemeneten!
+
+
+
+
+Egy Lakas struktúra az alábbi módon van definiálva
+
+struct Lakas {
+  int id;  Hirdetes azonositoja
+  unsigned int terulet;  Alapterulet m^2-ben
+  unsigned int ar;  Meghirdetett eladasi ar Ft-ban
+};
+
+Készítsen egy rendez függvényt, ami paraméterként vár egy Lakas tömböt, és a tömb elemszámát, majd rendezi a tömb elemeit négyzetméterenkénti ár szerint növekvő sorrendbe.
+
+A tesztkódokban található kiir függvényt nem kell elkészíteni.
+
+
+
+
+
+Egy autóverseny versenyzőinek aktuális sorrendjét egy láncolt lista tárolja, melynek elemei a következő struktúrával vannak definiálva
+
+struct Versenyzo {
+  string nev;
+  Versenyzo kov;
+};
+
+Készítsen egy eloz nevű függvényt, ami megkeres egy adott nevű versenyzőt, és felcseréli a listában előtte lévő elemmel (ha van ilyen).
+
+A függvény 1. paramétere a lista első elemének címe (a horgony), 2. paramétere a keresendő név. A függvény térjen vissza a művelet utáni lista első elemének címével.
+
+Ha a keresett nevű versenyző az 1. helyen van, vagy nem található, a függvény ne változtasson a listán! Feltételezheti, hogy a versenyzők neveiben nincs egyezés.
+
+Tipp Nem kell a lista elemeit ténylegesen felcserélni, elég a versenyzők neveit kicserélni.

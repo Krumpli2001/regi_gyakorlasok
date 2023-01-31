@@ -1,0 +1,16 @@
+#include <cctype>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int a, b, step = 1;
+    cin >> a >> b;
+    if (a > b) step = -1;
+    for (int i = a - 1; i != b - 1 + step; i += step) {
+        cout << char('A' + i);
+    }
+    cout << endl;
+    return 0;
+}

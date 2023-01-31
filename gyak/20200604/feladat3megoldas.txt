@@ -1,0 +1,17 @@
+void rendez(Lakas tomb[], int db) {
+    for (int i = 0; i < db - 1; i++) {
+        int mini = i;
+        double minval = double(tomb[i].ar) / tomb[i].terulet;
+        for (int j = i + 1; j < db; ++j) {
+            if (double(tomb[j].ar) / tomb[j].terulet < minval) {
+                mini = j;
+                minval = tomb[j].ar / tomb[j].terulet;
+            }
+        }
+        if (mini != i) {
+            Lakas csere = tomb[i];
+            tomb[i] = tomb[mini];
+            tomb[mini] = csere;
+        }
+    }
+}

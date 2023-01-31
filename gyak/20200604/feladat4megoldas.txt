@@ -1,0 +1,11 @@
+Versenyzo* eloz(Versenyzo* horgony, string nev) {
+    if (!horgony || !horgony->kov) return horgony;
+    Versenyzo* akt = horgony;
+    while (akt->kov && akt->kov->nev != nev) akt = akt->kov;
+    if (akt->kov) {
+        string tmp = akt->nev;
+        akt->nev = akt->kov->nev;
+        akt->kov->nev = tmp;
+    }
+    return horgony;
+}

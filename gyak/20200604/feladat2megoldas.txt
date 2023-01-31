@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+    string* ips = new string[n];
+    for (int i = 0; i < n; ++i) {
+        cin >> ips[i];
+    }
+    for (int i = 0; i < n; ++i) {
+        bool found = false;
+        for (int j = 0; j < i && !found; ++j) {
+            if (ips[j] == ips[i]) found = true;
+        }
+        if (!found) {
+            for (int j = i + 1; j < n && !found; ++j) {
+                if (ips[j] == ips[i]) {
+                    found = true;
+                    cout << ips[i] << endl;
+                }
+            }
+        }
+    }
+    delete[] ips;
+    return 0;
+}

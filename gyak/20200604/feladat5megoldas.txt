@@ -1,0 +1,11 @@
+matrix jobbraForgat(const matrix& mtx) {
+    matrix uj = {mtx.oszlopok, mtx.sorok, nullptr};
+    uj.m = new double*[uj.sorok];
+    for (int i = 0; i < uj.sorok; ++i) {
+        uj.m[i] = new double[uj.oszlopok];
+        for (int j = 0; j < uj.oszlopok; ++j) {
+            uj.m[i][j] = mtx.m[mtx.sorok - j - 1][i];
+        }
+    }
+    return uj;
+}
